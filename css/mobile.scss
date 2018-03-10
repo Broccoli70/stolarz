@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700');
+@import "palette.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Nanum Gothic';
+}
+
+//NAV
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  font-size: 1.8rem;
+  z-index: 10;
+  background: $color1;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  &--open {
+    display: none;
+    z-index: 11;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: $color1;
+  }
+}
+.menu__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  .item {
+    margin-top: 10vh;
+    padding: 2%;
+    background: $color2;
+  }
+  .item:hover {
+    background: $color3;
+    border-top: 5px solid $color5;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    color: $color4;
+  }
+}
+.menu__logo {
+  grid-area: 1 / 1 / 1 / 1;
+  background: url("../img/logo.png") left center no-repeat;
+  background-size: 45px;
+  margin-left: 1.25rem;
+}
+.menu__click {
+  grid-area: 1 / 1 / 1 / 1;
+  justify-self: flex-start;
+  align-self: center;
+  &--left {
+    justify-self: flex-end;
+    align-self: center;
+  }
+}
+.fa-bars {
+  grid-area: 1 / 1 / 1 / 1;
+  color: white;
+  margin-right: 1.25rem;
+  justify-self: flex-start;
+  align-self: center;
+}
+.fa-times {
+  display: none;
+  grid-area: 1 / 1 / 1 / 1;
+  color: white;
+  margin-right: 1.25rem;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+// CONTENT
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.page {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+
+  &--first {
+    grid-template: 60px 25vh 1fr / 1fr;
+    background: $color5;
+  }
+  &--second {
+    grid-template: 60px 40vh 1fr / 1fr;
+    background: $color1;
+  }
+}
+.page__bg {
+  grid-area: 2 / 1 / 2 / 1;
+  width: 90%;
+  height: 100%;
+  margin-top: 40px;
+  border-radius: 2px;
+  background: $color3 url("../img/bird.jpg");
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+}
+.page__text-logo {
+  width: 100%;
+  height: 100%;
+  background: url("../img/logo2.png") center center no-repeat;
+  background-size: 55%;
+  opacity: 0;
+  transform: scale(1.1);
+}
+.page__break {
+  grid-area: 3 / 1 / 3 / 1;
+  background: #eeeeee;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.page__circle {
+  width: 100px;
+  height: 50px;
+  border-radius: 2px;
+  margin-top: 20px;
+  background: $color4;
+  border: 2px solid #cfcfcf;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: $color2;
+  }
+}
+.page__h2 {
+  width: 75%;
+  color: #797979;
+  text-align: center;
+  margin-top: -25px;
+  font-size: 1.25rem;
+  transform: scaleX(0.9);
+  z-index: 0;
+  opacity: 0;
+}
