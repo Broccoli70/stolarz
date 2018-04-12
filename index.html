@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stolarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" media="(max-width: 640px)" href="css/mobile.min.css">
+    <link rel="stylesheet" media="(min-width: 640px)"href="css/desk.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+  </head>
+  <body>
+
+    <nav class="menu">
+      <ul class="menu__row">
+        <li class="menu__element" id="open"> <i class="fas fa-caret-down"></i> </li>
+        <li class="menu__element"> </li>
+        <li class="menu__element"> <div class="menu__logo"></div> </li>
+      </ul>
+      <div class="open"></div>
+    </nav>
+
+    <main class="page">
+      <div class="page__header page__header--center page__header--text page__header--darkviolet">
+        <div class="page__icon page__icon--main"></div>
+        <h2>Stanisław Biernacki</h2>
+        <p>Stolarstwo</p>
+      </div>
+
+      <div class="page__bg">
+      </div>
+
+      <div class="page__header page__header--center page__header--text page__header--darkviolet">
+          <div class="page__icon page__icon--history"></div>
+          <h2>Historia</h2>
+          <p>Jesteśmy zakładem stolarskim prężnie działającym od 1988. Założycielem firmy jest Stanisław Biernacki.</p>
+      </div>
+
+      <div class="page__header page__header--center page__header--text page__header--graybrown">
+          <div class="page__icon page__icon--saw"></div>
+          <h2>Produkty</h2>
+          <p>Mimo podobnego stylu, każdy nasz produkt jest inny. Nie boimy się nowoczesnych rozwiązań.</p>
+          <button type="button" class="page__btn" id="gallery">Więcej</button>
+      </div>
+
+
+      <div class="page__header page__header--text page__header--center page__header--pink page__header--darkviolet">
+          <div class="page__icon page__icon--location"></div>
+          <h2>Lokalizacja</h2>
+          <p>Rąbkowa 96</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2578.7276608883603!2d20.67223421570562!3d49.734750879383064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473df3e12de6589d%3A0xd60d2be6e955ffc1!2sR%C4%85bkowa+96%2C+33-312+R%C4%85bkowa%2C+Poland!5e0!3m2!1sen!2sus!4v1522659627050&callback=initMap" style="border:0"></iframe>
+      </div>
+
+      <div class="gallery-open">
+        <div class="photo">
+          <div class="photo__content"></div>
+          <button type="button" class="page__btn page__btn--left page__btn--small" id="left"></button>
+          <button type="button" class="page__btn page__btn--right page__btn--small" id="right"></button>
+        </div>
+        <button type="button" class="page__btn page__btn--dark" id="back">Wróć</button>
+      </div>
+
+      <div class="page__header page__header--text page__header--center page__header--gold">
+        <div class="page__icon page__icon--phone"></div>
+        <h2>Kontakt</h2>
+        <div class="page__contact"> <p class="page__contact--left">Komorkowy</p> <p class="page__contact--right">999999999</p> </div>
+        <div class="page__contact"> <p class="page__contact--left">Mail</p> <p class="page__contact--right">Krater@gmail.com</p> </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
